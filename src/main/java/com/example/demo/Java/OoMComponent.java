@@ -2,6 +2,7 @@ package com.example.demo.Java;
 
 import org.springframework.stereotype.Component;
 
+import javax.annotation.Resource;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.*;
@@ -12,6 +13,9 @@ import java.util.concurrent.*;
  **/
 @Component
 public class OoMComponent {
+
+    @Resource
+    private OomTest oomTest;
 
 
     public void outMerry() {

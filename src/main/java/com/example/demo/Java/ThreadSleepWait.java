@@ -10,10 +10,12 @@ public class ThreadSleepWait {
 
     public static void main(String[] args) {
 
-        new Thread(() -> {
+        Thread th1 = new Thread(() -> {
             new Thread1().run();
-        }).start();
+        });
+        th1.start();
         new Thread(() -> new Thread2().run()).start();
+
 
     }
 

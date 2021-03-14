@@ -12,10 +12,10 @@ import java.lang.reflect.Proxy;
 public class JDKProxyTest {
 
     public static void main(String[] args) {
-        UseeerManagerImpl userM1 = new UseeerManagerImpl();
+        UserManagerImpl userM1 = new UserManagerImpl();
         JDKProxyHandler jdkProxyHandler = new JDKProxyHandler(userM1);
-        UserManager useeerManager = (UserManager) Proxy.newProxyInstance(UseeerManagerImpl.class.getClassLoader(),
-                UseeerManagerImpl.class.getInterfaces(), jdkProxyHandler);
+        UserManager useeerManager = (UserManager) Proxy.newProxyInstance(UserManagerImpl.class.getClassLoader(),
+                UserManagerImpl.class.getInterfaces(), jdkProxyHandler);
         useeerManager.addUser("zh", "134");
 
         int[] table = new int[] {1,3,5,7,9};

@@ -1,5 +1,6 @@
 package com.example.demo.Java;
 
+import com.example.demo.Java.Proxy.UserManager;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
@@ -15,10 +16,13 @@ public class OomTest {
     @Resource
     private OoMComponent ooMComponent;
 
+    @Resource
+    private UserManager userManager;
+
     @PostConstruct
     public void init() {
         System.out.println("ooMComponent.outMemoryThread() - start");
-        ooMComponent.outMemoryThread();
+        userManager.addUser("su", "su");
         System.out.println("ooMComponent.outMemoryThread() - end");
     }
 
