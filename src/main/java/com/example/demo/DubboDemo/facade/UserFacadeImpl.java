@@ -1,4 +1,4 @@
-package com.example.demo.DubboDemo.Facade;
+package com.example.demo.DubboDemo.facade;
 
 import com.example.demo.DubboDemo.api.UserFacade;
 import org.apache.dubbo.config.annotation.Service;
@@ -12,6 +12,6 @@ public class UserFacadeImpl implements UserFacade {
 
     @Override
     public String getUserName(Long userId) {
-        return String.valueOf(userId);
+        return "my userId is " + userId;
     }
 }
