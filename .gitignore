@@ -1,7 +1,7 @@
 /target/
 /*/target/
 .DS_Store
-!.mvn/wrapper/maven-wrapper.jar
+/.mvn/*
 nohup.out
 
 ### STS ###
