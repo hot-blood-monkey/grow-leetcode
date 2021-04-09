@@ -7,7 +7,7 @@ import java.util.Arrays;
 public class QuickSort {
 
     public void quickSort(int[] nums) {
-        quickSort(nums, 0, nums.length - 1);
+        quickSort(nums, 0, nums.length);
     }
 
     private void quickSort(int[] nums, int start, int end) {
@@ -21,7 +21,7 @@ public class QuickSort {
         int greaterIndex = end;
         int comparator = nums[start];
         int index = start;
-        while (index <= greaterIndex) {
+        while (index < greaterIndex) {
             if (nums[index] < comparator) {
                 swap(nums, index, lessIndex);
                 index++;
@@ -29,11 +29,13 @@ public class QuickSort {
             } else if (nums[index] == comparator) {
                 index++;
             } else {
-                swap(nums, index, greaterIndex);
                 greaterIndex--;
+                swap(nums, index, greaterIndex);
             }
         }
 
+        quickSort(nums, start, lessIndex);
+        quickSort(nums, greaterIndex, end);
     }
 
 

@@ -13,12 +13,12 @@ import javax.annotation.PostConstruct;
 @Component
 public class UserConsumer {
 
-    @Reference(check = false, version = "1.0.0", timeout = 2000, init = true)
-    private UserFacade userFacade;
-
-    @PostConstruct
-    public void init() {
-        String name = userFacade.getUserName(23L);
-        System.out.println(name);
-    }
+//    @Reference(check = false, version = "1.0.0", timeout = 2000, init = true)
+//    private UserFacade userFacade;
+//
+//    @PostConstruct
+//    public void init() {
+//        String name = userFacade.getUserName(23L);
+//        System.out.println(name);
+//    }
 }
