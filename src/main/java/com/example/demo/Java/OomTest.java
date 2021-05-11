@@ -1,5 +1,6 @@
 package com.example.demo.Java;
 
+import com.example.demo.Java.Aspect.annotation.ReqBefore;
 import com.example.demo.Java.Proxy.UserManager;
 import org.springframework.stereotype.Component;
 
@@ -24,6 +25,10 @@ public class OomTest {
         System.out.println("ooMComponent.outMemoryThread() - start");
         userManager.addUser("su", "su");
         System.out.println("ooMComponent.outMemoryThread() - end");
+    }
+
+    @ReqBefore
+    public void aop() {
     }
 
 }

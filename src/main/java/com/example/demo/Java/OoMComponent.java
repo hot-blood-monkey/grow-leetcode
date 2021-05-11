@@ -1,5 +1,6 @@
 package com.example.demo.Java;
 
+import com.example.demo.Java.Aspect.annotation.ReqBefore;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.Resource;
@@ -17,7 +18,7 @@ public class OoMComponent {
     @Resource
     private OomTest oomTest;
 
-
+    @ReqBefore
     public void outMerry() {
         List<int[]> res = new ArrayList<>();
         for (int i = 0; i<999999999; i ++) {
@@ -26,6 +27,7 @@ public class OoMComponent {
         System.out.println(res.size());
     }
 
+    @ReqBefore
     public void outMemoryThread() {
         ExecutorService executor = new ThreadPoolExecutor(
                 100,

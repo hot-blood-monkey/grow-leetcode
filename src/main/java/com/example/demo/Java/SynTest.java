@@ -58,16 +58,19 @@ public class SynTest {
 
 
     public static void main(String[] args) {
-        for (int i = 0; i < 5; i++) {
-            String name = String.valueOf(i);
-            Thread thread = new Thread(() -> {
-                SyncThread syncThread = new SyncThread();
-                syncThread.run2Class(name);
-//                SyncThread.runStatic(name);
-            });
-            thread.start();
-        }
+//        for (int i = 0; i < 5; i++) {
+//            String name = String.valueOf(i);
+//            Thread thread = new Thread(() -> {
+//                SyncThread syncThread = new SyncThread();
+//                syncThread.run2Class(name);
+////                SyncThread.runStatic(name);
+//            });
+//            thread.start();
+//        }
 
 
+        SyncThread s = new SyncThread();
+        s.run("s1");
+        s.run2("s2");
     }
 }
