@@ -12,6 +12,9 @@ public class ClassLoadInitProcess {
         for (URL url : urls) {
             System.out.println(JSON.toJSON(url));
         }
+
+
+
     }
 
 }

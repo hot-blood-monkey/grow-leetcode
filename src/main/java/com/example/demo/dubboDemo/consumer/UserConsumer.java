@@ -13,20 +13,20 @@ import javax.annotation.PostConstruct;
 @Component
 public class UserConsumer {
 
-    @Reference(check = false, version = "1.0.0", timeout = 2000, init = true)
+//    @Reference(check = false, version = "1.0.0", timeout = 2000, init = true)
     private UserFacade us;
 
-    @PostConstruct
-    public void init() {
-        new Thread(() -> {
-            try {
-                Thread.sleep(3000);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-            String name = us.getUserName(23L);
-            System.out.println(name);
-        }).start();
-
-    }
+//    @PostConstruct
+//    public void init() {
+//        new Thread(() -> {
+//            try {
+//                Thread.sleep(3000);
+//            } catch (InterruptedException e) {
+//                e.printStackTrace();
+//            }
+//            String name = us.getUserName(23L);
+//            System.out.println(name);
+//        }).start();
+//
+//    }
 }

@@ -15,6 +15,9 @@ public class User implements InitializingBean, BeanNameAware, ApplicationContext
 
     private Integer age;
     private String name;
+    private String tel;
+    private String province;
+    private String county;
 
     public Integer getAge() {
         return age;
@@ -30,6 +33,14 @@ public class User implements InitializingBean, BeanNameAware, ApplicationContext
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public void setTel(String tel) {
+        this.tel = tel;
+    }
+
+    public void setProvince(String province) {
+        this.province = province;
     }
 
     @Override

@@ -1,4 +1,4 @@
-package com.example.demo.javaSomething;
+package com.example.demo.javaSomething.concurrentUtilDemo;
 
 import org.apache.dubbo.common.utils.NamedThreadFactory;
 
@@ -14,6 +14,7 @@ public class CountDownLatchDemo {
     public static void carArrive(String name) {
         System.out.println( "Car " + name +" arrive");
         countDownLatch.countDown();
+        System.out.println( "Car " + name +" arrive down");
     }
 
     public static void workerCanDo(String name)  {

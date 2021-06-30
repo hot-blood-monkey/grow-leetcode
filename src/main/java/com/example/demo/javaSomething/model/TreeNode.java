@@ -1,5 +1,8 @@
 package com.example.demo.javaSomething.model;
 
+import lombok.Data;
+
+@Data
 public class TreeNode {
     public Integer value;
     public TreeNode left;
